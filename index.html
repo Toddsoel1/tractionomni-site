@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TractionOmni | Market share and white space intelligence for dealers</title>
+<meta name="description" content="See your real market share, which brands and segments are gaining ground, and the ZIP codes where buyers are going unserved. Free market snapshot for founding boat dealers.">
+<link rel="canonical" href="https://tractionomni.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TractionOmni">
+<meta property="og:title" content="TractionOmni | Know who's winning your market">
+<meta property="og:description" content="Market share, segment trends and white space for dealers. Free market snapshot for founding dealers.">
+<meta property="og:url" content="https://tractionomni.com/">
+<meta property="og:image" content="https://tractionomni.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TractionOmni | Know who's winning your market">
+<meta name="twitter:description" content="Market share, segment trends and white space for dealers. Free market snapshot for founding dealers.">
+<meta name="twitter:image" content="https://tractionomni.com/og-image.png">
+<meta name="theme-color" content="#10222E">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600;125,800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tractionomni.com/#org",
+      "name": "TractionOmni",
+      "url": "https://tractionomni.com/",
+      "logo": "https://tractionomni.com/favicon.svg",
+      "email": "info@tractionomni.com",
+      "description": "Market intelligence for dealers: market share, segment trends and white space by brand and geography."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tractionomni.com/#site",
+      "url": "https://tractionomni.com/",
+      "name": "TractionOmni",
+      "publisher": { "@id": "https://tractionomni.com/#org" }
+    },
+    {
+      "@type": "Service",
+      "name": "TractionOmni market intelligence",
+      "serviceType": "Market share and white space analysis for dealers",
+      "provider": { "@id": "https://tractionomni.com/#org" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "audience": { "@type": "BusinessAudience", "audienceType": "Boat, powersports, RV and trailer dealers" },
+      "offers": { "@type": "Offer", "name": "Free market snapshot for founding dealers", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is TractionOmni?", "acceptedAnswer": { "@type": "Answer", "text": "TractionOmni is a market intelligence service for dealers. It shows your market share, who is gaining ground, and where demand is going unserved, by brand, segment and geography." } },
+        { "@type": "Question", "name": "Who is TractionOmni for?", "acceptedAnswer": { "@type": "Answer", "text": "Dealers and dealer groups, starting with boat dealers. Powersports, RV and trailer dealers are next. Manufacturers can contact us about brand and network views." } },
+        { "@type": "Question", "name": "What does the free market snapshot include?", "acceptedAnswer": { "@type": "Answer", "text": "Your share by brand and segment in your market, how it changed from last year, and a short list of white space opportunities near your store." } },
+        { "@type": "Question", "name": "Is the snapshot really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, for founding dealers. We are working closely with a small number of dealers in each market before launch. Paid plans with full access come later." } },
+        { "@type": "Question", "name": "Where does the data come from?", "acceptedAnswer": { "@type": "Answer", "text": "From official and licensed industry sources, verified and standardized by our team. We report counts of units, never personal information about buyers." } },
+        { "@type": "Question", "name": "Do you share my information?", "acceptedAnswer": { "@type": "Answer", "text": "No. Your details are used only to prepare your snapshot and to contact you. We never sell your information." } }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+/* Layout: market-chart page. Cool chart paper, chart-blue water bands, chart magenta for callouts. Hero pairs the promise with a sample market snapshot; the sign-up form is the destination. */
+:root {
+  --paper: #F6F8F9;
+  --surface: #FFFFFF;
+  --shoal: #E1EEF5;
+  --ink: #10222E;
+  --ink-soft: #4A5D69;
+  --rule: #C7D5DE;
+  --depth: #2B6A93;
+  --magenta: #A3195B;
+  --up: #1E7B4F;
+  --down: #B23A2E;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0C1820; --surface: #102230; --shoal: #11283A; --ink: #E4EDF2; --ink-soft: #9DB1BE;
+    --rule: #26404F; --depth: #7DB4D8; --magenta: #E0629E; --up: #5CC48E; --down: #F08A7E; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0C1820; --surface: #102230; --shoal: #11283A; --ink: #E4EDF2; --ink-soft: #9DB1BE;
+  --rule: #26404F; --depth: #7DB4D8; --magenta: #E0629E; --up: #5CC48E; --down: #F08A7E; color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 1.0625rem/1.65 var(--body);
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+img, svg { max-width: 100%; }
+a { color: var(--depth); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 2px solid var(--magenta); outline-offset: 3px; }
+
+.wrap {
+  max-width: 1120px; margin-inline: auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+.band { padding-block: clamp(56px, 8vw, 96px); }
+.band--shoal { background: var(--shoal); }
+
+.eyebrow { font: 500 0.78rem/1.2 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--magenta); margin: 0 0 14px; }
+h1, h2, h3 { font-family: var(--display); font-stretch: 125%; text-wrap: balance; margin: 0; }
+h1 { font-weight: 800; font-size: clamp(2.05rem, 5vw, 3.5rem); line-height: 1.05; letter-spacing: -0.015em; }
+h2 { font-weight: 800; font-size: clamp(1.6rem, 3.4vw, 2.3rem); line-height: 1.1; letter-spacing: -0.01em; }
+h3 { font-weight: 600; font-size: 1.12rem; line-height: 1.25; }
+p { margin: 0; max-width: 64ch; }
+.lede { font-size: clamp(1.08rem, 1.6vw, 1.22rem); color: var(--ink-soft); }
+.section-head { display: grid; gap: 14px; margin-bottom: clamp(32px, 4vw, 48px); }
+
+/* Header */
+.site-head { border-bottom: 1px solid var(--rule); background: var(--paper); }
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 16px; }
+.mark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.mark svg { width: 30px; height: 30px; flex: none; }
+.mark span { font: 800 1rem/1 var(--display); font-stretch: 125%; letter-spacing: 0.03em; }
+.mark span b { color: var(--magenta); font-weight: 800; }
+.nav { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+.nav a { color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+.nav a:hover { color: var(--ink); }
+.nav a.nav-cta { color: var(--paper); background: var(--ink); padding: 9px 14px; border-radius: 6px; }
+.nav a.nav-cta:hover { background: var(--depth); color: var(--paper); }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; border-radius: 6px; font: 600 1rem/1 var(--body); text-decoration: none; border: 1px solid transparent; cursor: pointer; }
+.btn--solid { background: var(--magenta); color: #fff; }
+.btn--solid:hover { filter: brightness(1.08); }
+.btn--line { border-color: var(--rule); color: var(--ink); background: transparent; }
+.btn--line:hover { border-color: var(--depth); }
+
+/* Hero */
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+.hero-copy { display: grid; gap: 22px; min-width: 0; }
+.ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 4px; }
+.fine { font-size: 0.9rem; color: var(--ink-soft); }
+
+/* Sample snapshot card */
+.snap { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: clamp(20px, 3vw, 28px); display: grid; gap: 16px; min-width: 0; margin: 0; }
+.snap-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.snap-title { font: 600 1rem/1.3 var(--body); }
+.snap-sub { font: 500 0.74rem/1.2 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+.bars { display: grid; gap: 10px; }
+.bar { display: grid; grid-template-columns: 74px minmax(0, 1fr) 92px; gap: 10px; align-items: center; font-size: 0.92rem; }
+.bar-name { color: var(--ink); font-weight: 500; }
+.bar-track { height: 12px; background: var(--shoal); border-radius: 3px; overflow: hidden; }
+.bar-fill { display: block; height: 100%; background: var(--depth); border-radius: 3px; }
+.bar.you .bar-fill { background: var(--magenta); }
+.bar.you .bar-name { color: var(--magenta); font-weight: 600; }
+.bar-val { font: 500 0.86rem/1 var(--mono); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.up { color: var(--up); } .down { color: var(--down); }
+.space { border-top: 1px dashed var(--rule); padding-top: 14px; display: grid; gap: 6px; }
+.space strong { font: 600 0.95rem/1.35 var(--body); }
+.zips { display: flex; gap: 6px; flex-wrap: wrap; }
+.zip { font: 500 0.8rem/1 var(--mono); padding: 6px 8px; border-radius: 4px; background: var(--shoal); color: var(--ink); }
+.snap figcaption { font-size: 0.8rem; color: var(--ink-soft); }
+
+/* Offer */
+.offer-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.offer { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 24px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.offer .tag { justify-self: start; font: 500 0.72rem/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--magenta); border: 1px solid var(--magenta); border-radius: 999px; padding: 5px 9px; }
+.offer p { color: var(--ink-soft); font-size: 1rem; }
+.offer-note { margin-top: 22px; font-size: 0.95rem; color: var(--ink-soft); }
+
+/* Outcomes */
+.cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(18px, 3vw, 32px); }
+.col { display: grid; gap: 10px; align-content: start; padding-top: 18px; border-top: 2px solid var(--depth); min-width: 0; }
+.col p { color: var(--ink-soft); font-size: 1rem; }
+
+/* Categories */
+.cats { display: flex; flex-wrap: wrap; gap: 10px; }
+.cat { display: inline-flex; align-items: center; gap: 8px; font: 500 0.95rem/1 var(--body); padding: 11px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--rule); }
+.cat small { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-soft); }
+.cat.live { border-color: var(--magenta); }
+.cat.live small { color: var(--magenta); }
+
+/* Form */
+.signup .wrap { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(28px, 5vw, 64px); align-items: start; }
+.signup-intro { display: grid; gap: 16px; min-width: 0; }
+.checks { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 10px; }
+.checks li { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 10px; }
+.checks svg { width: 18px; height: 18px; margin-top: 4px; }
+.checks path { fill: none; stroke: var(--magenta); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+form.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: clamp(20px, 3vw, 30px); display: grid; gap: 16px; min-width: 0; }
+.row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.field { display: grid; gap: 6px; min-width: 0; }
+.field label { font: 600 0.9rem/1.2 var(--body); }
+.field label span { font-weight: 400; color: var(--ink-soft); }
+.field input, .field textarea {
+  width: 100%; font: 400 1rem/1.4 var(--body); color: var(--ink); background: var(--paper);
+  border: 1px solid var(--rule); border-radius: 6px; padding: 11px 12px;
+}
+.field textarea { min-height: 96px; resize: vertical; }
+.field input:focus, .field textarea:focus { border-color: var(--depth); outline: none; box-shadow: 0 0 0 3px color-mix(in srgb, var(--depth) 22%, transparent); }
+.field [aria-invalid="true"] { border-color: var(--down); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-foot { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; }
+.form-msg { font-size: 0.95rem; }
+.form-msg.err { color: var(--down); }
+.thanks { display: grid; gap: 10px; }
+.thanks h3 { font-size: 1.3rem; }
+
+/* FAQ */
+.faq { display: grid; gap: 0; border-top: 1px solid var(--rule); max-width: 820px; }
+.faq details { border-bottom: 1px solid var(--rule); padding-block: 4px; }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; padding-block: 16px; font: 600 1.05rem/1.35 var(--body); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font: 500 1.3rem/1 var(--mono); color: var(--magenta); }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { padding-bottom: 18px; color: var(--ink-soft); }
+
+/* Footer */
+.site-foot { border-top: 1px solid var(--rule); }
+.site-foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; padding-block: 26px; font-size: 0.88rem; color: var(--ink-soft); }
+.site-foot a { color: var(--ink-soft); }
+
+@media (max-width: 960px) {
+  .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .hero .wrap, .signup .wrap { grid-template-columns: minmax(0, 1fr); }
+  .offer-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .cols, .row2 { grid-template-columns: minmax(0, 1fr); }
+  .nav a:not(.nav-cta) { display: none; }
+  .bar { grid-template-columns: 64px minmax(0, 1fr) 84px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="mark" href="/" aria-label="TractionOmni home">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="6" fill="var(--ink)"/>
+        <path d="M6 22 L16 9 L26 22" fill="none" stroke="var(--magenta)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 24 L16 17.5 L21 24" fill="none" stroke="var(--depth)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>TRACTION<b>OMNI</b></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#offer">Founding dealers</a>
+      <a href="#categories">Categories</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#snapshot">Get your free snapshot</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="band hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Market intelligence for dealers</p>
+        <h1>Know who's winning your market. Find where you can win next.</h1>
+        <p class="lede">TractionOmni shows dealers their real market share, the brands and segments gaining ground, and the ZIP codes where buyers are going unserved. Starting with boats. Built for every dealer category.</p>
+        <div class="ctas">
+          <a class="btn btn--solid" href="#snapshot">Get your free market snapshot</a>
+          <a class="btn btn--line" href="#offer">See what's included</a>
+        </div>
+        <p class="fine">Free for founding dealers. A limited number of spots in each market.</p>
+      </div>
+
+      <figure class="snap" aria-label="Sample market snapshot with illustrative numbers">
+        <div class="snap-top">
+          <span class="snap-title">Market snapshot</span>
+          <span class="snap-sub">Your county · Rolling 12 months</span>
+        </div>
+        <div class="bars">
+          <div class="bar"><span class="bar-name">Brand A</span><span class="bar-track"><span class="bar-fill" style="width:88%"></span></span><span class="bar-val">22.0% <span class="down">▼1.3</span></span></div>
+          <div class="bar you"><span class="bar-name">You</span><span class="bar-track"><span class="bar-fill" style="width:74%"></span></span><span class="bar-val">18.4% <span class="up">▲2.1</span></span></div>
+          <div class="bar"><span class="bar-name">Brand C</span><span class="bar-track"><span class="bar-fill" style="width:61%"></span></span><span class="bar-val">15.2% <span class="up">▲0.4</span></span></div>
+          <div class="bar"><span class="bar-name">Brand D</span><span class="bar-track"><span class="bar-fill" style="width:39%"></span></span><span class="bar-val">9.8% <span class="down">▼0.6</span></span></div>
+        </div>
+        <div class="space">
+          <strong>White space: 3 ZIP codes where your segment grew 20%+ and you sold none.</strong>
+          <div class="zips"><span class="zip">ZIP ···41</span><span class="zip">ZIP ···07</span><span class="zip">ZIP ···63</span></div>
+        </div>
+        <figcaption>Illustration only. Your snapshot uses your market and your brands.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band band--shoal" id="offer">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Founding dealer program</p>
+        <h2>Three views of your market, free while we launch.</h2>
+      </div>
+      <div class="offer-grid">
+        <div class="offer">
+          <span class="tag">Market share</span>
+          <h3>Where you stand</h3>
+          <p>Your share by brand and segment in your county and market, side by side with the brands you compete with, this year against last.</p>
+        </div>
+        <div class="offer">
+          <span class="tag">White space</span>
+          <h3>Where you can win</h3>
+          <p>The ZIP codes where your segment is growing and your brands are under-represented, so your marketing goes where the buyers are.</p>
+        </div>
+        <div class="offer">
+          <span class="tag">Trends</span>
+          <h3>What's moving</h3>
+          <p>Which boat types are gaining or slipping in your market, from tow boats and pontoons to center consoles and fishing boats.</p>
+        </div>
+      </div>
+      <p class="offer-note">Founding dealers get their snapshot free and help shape what TractionOmni becomes. Spots are limited in each market.</p>
+    </div>
+  </section>
+
+  <section class="band" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Why dealers use it</p>
+        <h2>Stop guessing. Plan the season on facts.</h2>
+      </div>
+      <div class="cols">
+        <div class="col"><h3>Order with confidence</h3><p>Stock the models and sizes your market is actually buying.</p></div>
+        <div class="col"><h3>Spend where buyers are</h3><p>Aim your ads and events at the ZIP codes that buy your segment.</p></div>
+        <div class="col"><h3>Win the brand conversation</h3><p>Walk into manufacturer reviews and brand pitches with proof of your market.</p></div>
+        <div class="col"><h3>See competitors coming</h3><p>Spot a rival gaining ground before it shows up in your own sales.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--shoal" id="categories">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Categories</p>
+        <h2>Boats first. Every dealer next.</h2>
+        <p class="lede">We are launching with boat dealers and adding categories as we go. Tell us what you sell and we'll let you know when your category opens.</p>
+      </div>
+      <div class="cats">
+        <span class="cat live">Boats <small>Now</small></span>
+        <span class="cat">Personal watercraft <small>Next</small></span>
+        <span class="cat">Powersports <small>Next</small></span>
+        <span class="cat">RVs <small>Next</small></span>
+        <span class="cat">Trailers <small>Next</small></span>
+        <span class="cat">More categories <small>Planned</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="band signup" id="snapshot">
+    <div class="wrap">
+      <div class="signup-intro">
+        <p class="eyebrow">Get started</p>
+        <h2>Claim your free market snapshot.</h2>
+        <p class="lede">Tell us about your dealership and we'll prepare a snapshot of your market.</p>
+        <ul class="checks">
+          <li><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5 L7.2 13.5 L15 4.5"/></svg><span>Your market share by brand and segment</span></li>
+          <li><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5 L7.2 13.5 L15 4.5"/></svg><span>White space near your store</span></li>
+          <li><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9.5 L7.2 13.5 L15 4.5"/></svg><span>No cost and no obligation</span></li>
+        </ul>
+      </div>
+
+      <form class="card" id="lead-form" novalidate>
+        <div class="row2">
+          <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-company">Dealership</label><input id="f-company" name="company" autocomplete="organization" required></div>
+          <div class="field"><label for="f-state">State</label><input id="f-state" name="state" autocomplete="address-level1" required></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-phone">Phone <span>(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+          <div class="field"><label for="f-sell">What you sell</label><input id="f-sell" name="sell" placeholder="Boats, PWC, powersports, RVs…" required></div>
+        </div>
+        <div class="field"><label for="f-brands">Brands you carry <span>(optional)</span></label><input id="f-brands" name="brands"></div>
+        <div class="field"><label for="f-question">What would you most like to know about your market? <span>(optional)</span></label><textarea id="f-question" name="question"></textarea></div>
+        <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
+        <div class="form-foot">
+          <button class="btn btn--solid" type="submit" id="f-submit">Request my snapshot</button>
+          <span class="form-msg" id="f-msg" role="status" aria-live="polite"></span>
+        </div>
+        <p class="fine">We use your details only to prepare your snapshot and contact you. We never sell your information.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="band band--shoal" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions dealers ask</h2>
+      </div>
+      <div class="faq">
+        <details><summary>What is TractionOmni?</summary><p>TractionOmni is a market intelligence service for dealers. It shows your market share, who is gaining ground, and where demand is going unserved, by brand, segment and geography.</p></details>
+        <details><summary>Who is it for?</summary><p>Dealers and dealer groups, starting with boat dealers. Powersports, RV and trailer dealers are next. Manufacturers can contact us about brand and network views.</p></details>
+        <details><summary>What does the free snapshot include?</summary><p>Your share by brand and segment in your market, how it changed from last year, and a short list of white space opportunities near your store.</p></details>
+        <details><summary>Is it really free?</summary><p>Yes, for founding dealers. We are working closely with a small number of dealers in each market before launch. Paid plans with full access come later.</p></details>
+        <details><summary>Where does the data come from?</summary><p>From official and licensed industry sources, verified and standardized by our team. We report counts of units, never personal information about buyers.</p></details>
+        <details><summary>Do you share my information?</summary><p>No. Your details are used only to prepare your snapshot and to contact you. We never sell your information.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>TractionOmni · <a href="mailto:info@tractionomni.com">info@tractionomni.com</a> · © 2026</span>
+    <span>Data partnerships: <a href="mailto:records@tractionomni.com">records@tractionomni.com</a> · This site sets no cookies.</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var FORM = 'https://docs.google.com/forms/d/e/1FAIpQLScuySQZe79oI_ds04lIUCvtXH5Q6aP-l36ix3Niva9FCtz7Iw/formResponse';
+  var FALLBACK = 'https://docs.google.com/forms/d/e/1FAIpQLScuySQZe79oI_ds04lIUCvtXH5Q6aP-l36ix3Niva9FCtz7Iw/viewform';
+  var MAP = {
+    name: 'entry.704035928', email: 'entry.996132753', company: 'entry.818788213', state: 'entry.425104715',
+    phone: 'entry.1950405046', sell: 'entry.1949207570', brands: 'entry.1808038856', question: 'entry.1926520800'
+  };
+  var form = document.getElementById('lead-form');
+  var msg = document.getElementById('f-msg');
+  var btn = document.getElementById('f-submit');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    msg.className = 'form-msg'; msg.textContent = '';
+    if (form.website.value) return;
+    var missing = [];
+    ['name', 'email', 'company', 'state', 'sell'].forEach(function (k) { if (!form[k].value.trim()) missing.push(form[k]); });
+    if (missing.length) { msg.className = 'form-msg err'; msg.textContent = 'Please fill in the highlighted fields.'; missing[0].focus(); missing.forEach(function (f) { f.setAttribute('aria-invalid', 'true'); }); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.value.trim())) { msg.className = 'form-msg err'; msg.textContent = 'Please enter a valid email address.'; form.email.focus(); return; }
+    var body = new URLSearchParams();
+    Object.keys(MAP).forEach(function (k) { body.append(MAP[k], form[k].value.trim()); });
+    btn.disabled = true; btn.textContent = 'Sending…';
+    fetch(FORM, { method: 'POST', mode: 'no-cors', body: body })
+      .then(function () {
+        var first = form.name.value.trim().split(' ')[0];
+        form.innerHTML = '<div class="thanks"><h3>Thanks, ' + first.replace(/[<>&"]/g, '') + '. You\'re on the list.</h3><p>We\'ll reach out soon about your market snapshot. Watch for a short survey from info@tractionomni.com so we can tailor it to your dealership.</p></div>';
+      })
+      .catch(function () {
+        btn.disabled = false; btn.textContent = 'Request my snapshot';
+        msg.className = 'form-msg err';
+        msg.innerHTML = 'Something went wrong sending the form. You can <a href="' + FALLBACK + '" target="_blank" rel="noopener">use this form instead</a> or email info@tractionomni.com.';
+      });
+  });
+  form.addEventListener('input', function (e) { if (e.target.getAttribute('aria-invalid')) e.target.removeAttribute('aria-invalid'); });
+})();
+</script>
+</body>
+</html>

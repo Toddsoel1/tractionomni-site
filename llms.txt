@@ -1,0 +1,19 @@
+# TractionOmni
+
+> TractionOmni is a market intelligence service for dealers. It shows a dealer's market share by brand and segment, which competitors and segments are gaining ground, and the ZIP codes where buyers are going unserved ("white space").
+
+TractionOmni launches with boat dealers in the United States. Personal watercraft, powersports, RV and trailer dealers are next. Founding dealers receive a free market snapshot while the service launches.
+
+## What dealers get
+- Market share by brand and segment in their county and market, compared with the prior year
+- White space: ZIP codes where a segment is growing and the dealer's brands are under-represented
+- Segment trends, such as tow boats, pontoons, center consoles and fishing boats
+
+## Data and privacy
+- Built from official and licensed industry sources, reported as counts of units
+- No personal information about buyers is published
+
+## Contact
+- Website: https://tractionomni.com/
+- Dealers and manufacturers: info@tractionomni.com
+- Data partnerships: records@tractionomni.com
